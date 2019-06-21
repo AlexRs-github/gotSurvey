@@ -19,7 +19,7 @@ namespace Final_Ryan
                 var query = context.Submissions.ToList();
                 foreach (Submission s in query)
                 {
-                    litSubmissions.Text = litSubmissions.Text + $"<tr><td>{s.FirstName}</td><td>{s.FavChar1}</td><td>{s.FavChar2}</td><td>{s.Locale2}</td><td>{s.Locale1}</td>";
+                    litSubmissions.Text = litSubmissions.Text + $"<tr><td>{s.FirstName}</td><td>{s.Where}</td><td>{s.FavChar1}</td><td>{s.FavChar2}</td><td>{s.Locale1}</td><td>{s.Locale2}<td>{s.Rating1}</td><td>{s.Rating2}</td>";
                 }
             }
         }

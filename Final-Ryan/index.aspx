@@ -6,31 +6,37 @@
 <head runat="server">
     <link rel="stylesheet" href="Content/bootstrap.min.css" />
     <title></title>
+    <style type="text/css">
+        .auto-style1 {
+            width: 534px;
+            height: 296px;
+        }
+    </style>
 </head>
-<body>
-    <header>
-        <table>
-            <tr>
-                <td><img src="https://upload.wikimedia.org/wikipedia/en/d/d8/Game_of_Thrones_title_card.jpg" /></td><td><h1>Game of Thrones Survey</h1></td>
-            </tr>
-        </table>
+<body class="text-light bg-dark">
+    <header class="text-center">
+            <img src="https://upload.wikimedia.org/wikipedia/en/d/d8/Game_of_Thrones_title_card.jpg" class="auto-style1" />
     </header>
     <form id="form1" runat="server">
         <asp:Panel ID="pnlForm" runat="server" Visible="True">
-            <h2>Please fill out the survey below</h2>
-            <table border="1">
+            <br />
+            <br />
+            <h2 class="text-center">Please fill out the survey below</h2>
+            <br />
+            <br />
+            <table class="container h-100" border="1">
                 <tr>
                     <td>First Name:</td><td><asp:TextBox ID="txtFirstName" runat="server"></asp:TextBox><asp:RequiredFieldValidator ID="valFirstName" runat="server" ControlToValidate="txtFirstName" EnableClientScript="true" ErrorMessage="First Name Required" ForeColor="Red"/></td>
                 </tr>
                 <tr>
-                    <td>Where are you from?: </td><td><asp:TextBox ID="txtWhere" runat="server"></asp:TextBox></td>
+                    <td>Where are you from?: </td><td><asp:TextBox ID="txtWhere" runat="server"></asp:TextBox><asp:RequiredFieldValidator ID="RequiredFieldValidator2" runat="server" ControlToValidate="txtWhere" EnableClientScript="true" ErrorMessage="Location Required" ForeColor="Red"/></td>
                 </tr>
                 <tr>
                     <td>What was your favorite character between seasons 1 through 4?: </td>
                     <td>
                         <asp:RadioButton ID="Radio1" Text="Cersei Lannister" Checked="True" GroupName="radFavChar1" runat="server" /><br />
                         <asp:RadioButton ID="Radio4" Text="Ned Stark" Checked="False" GroupName="radFavChar1" runat="server" /><br />
-                        <asp:RadioButton ID="Radio2" Text="Ned Stark" Checked="False" GroupName="radFavChar1" runat="server" /><br />
+                        <asp:RadioButton ID="Radio2" Text="The Other Ned Stark" Checked="False" GroupName="radFavChar1" runat="server" /><br />
                         <asp:RadioButton ID="Radio3" Text="Catelyn Stark" Checked="False" GroupName="radFavChar1" runat="server" /><br />
                         <asp:RadioButton ID="Radio5" Text="Tyrion Lanister" Checked="False" GroupName="radFavChar1" runat="server" /><br />
                         <asp:RadioButton ID="Radio6" Text="Margaery Tyrell" Checked="False" GroupName="radFavChar1" runat="server" /><br />
@@ -44,7 +50,7 @@
                     <td>
                     <asp:RadioButton ID="Radio10" runat="server" Checked="True" GroupName="radFavChar2" Text="Cersei Lannister" /><br />
                     <asp:RadioButton ID="Radio11" runat="server" Checked="False" GroupName="radFavChar2" Text="Ned Stark" /><br />
-                    <asp:RadioButton ID="Radio12" runat="server" Checked="False" GroupName="radFavChar2" Text="Ned Stark" /><br />
+                    <asp:RadioButton ID="Radio12" runat="server" Checked="False" GroupName="radFavChar2" Text=" The Other Ned Stark" /><br />
                     <asp:RadioButton ID="Radio13" runat="server" Checked="False" GroupName="radFavChar2" Text="Catelyn Stark" /><br />
                     <asp:RadioButton ID="Radio14" runat="server" Checked="False" GroupName="radFavChar2" Text="Tyrion Lanister" /><br />
                     <asp:RadioButton ID="Radio15" runat="server" Checked="False" GroupName="radFavChar2" Text="Margaery Tyrell" /><br />
@@ -54,10 +60,10 @@
                     </td>
                 </tr>
                 <tr>
-                    <td>What was your favorite fictional locale between seasons 1 through 4?: </td><td><asp:TextBox ID="txtLocale1" runat="server"></asp:TextBox></td>
+                    <td>What was your favorite fictional locale between seasons 1 through 4?: </td><td><asp:TextBox ID="txtLocale1" runat="server"></asp:TextBox><asp:RequiredFieldValidator ID="RequiredFieldValidator3" runat="server" ControlToValidate="txtLocale1" EnableClientScript="true" ErrorMessage="Favorite Locale Required" ForeColor="Red"/></td>
                 </tr>
                 <tr>
-                    <td>What was your favorite fictional locale between seasons 4 through 8?: </td><td><asp:TextBox ID="txtLocale2" runat="server"></asp:TextBox></td>
+                    <td>What was your favorite fictional locale between seasons 4 through 8?: </td><td><asp:TextBox ID="txtLocale2" runat="server"></asp:TextBox><asp:RequiredFieldValidator ID="RequiredFieldValidator4" runat="server" ControlToValidate="txtLocale2" EnableClientScript="true" ErrorMessage="Favorite Locale Required" ForeColor="Red"/></td>
                 </tr>
                 <tr>
                     <td>What rating would you give seasons 1 through 4?: </td>
@@ -94,7 +100,10 @@
                     </td>
                 </tr>
             </table>
-            <asp:Button ID="btnSubmit" runat="server" OnClick="btnSubmit_Click" Text="Submit" />
+            <br />
+            <br />
+            <asp:Button ID="btnSubmit" runat="server" OnClick="btnSubmit_Click" Text="Submit" CssClass="container h-100" />
+            <asp:Label ID="lblError" runat="server" Text="" ForeColor="Red"/>
         </asp:Panel>
         <asp:Panel ID="pnlConfirm" runat="server" Visible="false">
             <h2>Thank you for your submission!</h2>
