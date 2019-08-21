@@ -4,7 +4,7 @@ using System.ComponentModel.DataAnnotations;
 using System.Linq;
 using System.Web;
 
-namespace Final_Ryan.Models
+namespace gotSurvey.Models
 {
     public class Submission
     {

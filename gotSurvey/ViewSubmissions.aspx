@@ -1,4 +1,4 @@
-﻿<%@ Page Language="C#" AutoEventWireup="true" CodeBehind="ViewSubmissions.aspx.cs" Inherits="Final_Ryan.ViewSubmissions" %>
+﻿<%@ Page Language="C#" AutoEventWireup="true" CodeBehind="ViewSubmissions.aspx.cs" Inherits="gotSurvey.ViewSubmissions" %>
 
 <%@ Register assembly="System.Web.DataVisualization, Version=4.0.0.0, Culture=neutral, PublicKeyToken=31bf3856ad364e35" namespace="System.Web.UI.DataVisualization.Charting" tagprefix="asp" %>
 
@@ -10,6 +10,7 @@
     <title></title>
 </head>
 <body class="text-light bg-dark">
+    <header class="text-center">
     <header class="text-center">
             <img src="https://upload.wikimedia.org/wikipedia/en/d/d8/Game_of_Thrones_title_card.jpg" class="auto-style1" />
     </header>

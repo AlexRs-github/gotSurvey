@@ -1,4 +1,4 @@
-﻿using Final_Ryan.Models;
+﻿using gotSurvey.Models;
 using System;
 using System.Collections.Generic;
 using System.Linq;
@@ -6,7 +6,7 @@ using System.Web;
 using System.Web.UI;
 using System.Web.UI.WebControls;
 
-namespace Final_Ryan
+namespace gotSurvey
 {
     public partial class Index : System.Web.UI.Page
     {

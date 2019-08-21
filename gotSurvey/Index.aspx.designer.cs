@@ -7,7 +7,7 @@
 // </auto-generated>
 //------------------------------------------------------------------------------
 
-namespace Final_Ryan {
+namespace gotSurvey {
     
     
     public partial class Index {

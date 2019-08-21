@@ -6,7 +6,7 @@ using System.Web.Security;
 using System.Web.SessionState;
 using System.Web.UI;
 
-namespace Final_Ryan
+namespace gotSurvey
 {
     public class Global : System.Web.HttpApplication
     {
